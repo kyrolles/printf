@@ -6,19 +6,20 @@
 
 int _putchar(char c);
 int _strlen(char *s);
+int _printf(const char *format, ...);
 
 
 typedef struct specefier
 {
 
 char c;
-int (*P)();
+int (*P)(va_list args);
 
 
 }spec;
 
-int print_char();
-int print_string();
+int print_char(va_list args);
+int print_string(va_list args);
 int print_precent();
 
 
