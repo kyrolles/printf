@@ -9,6 +9,9 @@ int _strlen(char *s);
 int _printf(const char *format, ...);
 
 
+
+
+
 typedef struct specefier
 {
 
@@ -16,11 +19,11 @@ char c;
 int (*P)(va_list args);
 
 
-}spec;
+} spec;
 
 int print_char(va_list args);
 int print_string(va_list args);
-int print_precent();
+int print_precent(va_list args);
 
 
 #endif
