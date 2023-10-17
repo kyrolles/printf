@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-
 /**
 * _printf - this function print a sentences and can print two type
 * of variable and the '%'.
