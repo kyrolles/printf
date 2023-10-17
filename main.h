@@ -33,6 +33,8 @@ int (*P)(va_list args);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_precent(va_list args);
+int print_decimal(va_list args);
+
 
 
 #endif
