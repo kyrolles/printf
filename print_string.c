@@ -13,24 +13,28 @@ char *str;
 char *str_copy;
 int len = 0;
 
-    str = va_arg(args, char*);
+str = va_arg(args, char*);
 
-    if (str == NULL)
-    {
-        str = "(null)";
-    }
+if (str == NULL)
+{
+str = "(null)";
+}
 
-    len = _strlen(str);
-    str_copy = malloc((len + 1) * sizeof(char)); /* Allocate memory for the string copy*/
+len = _strlen(str);
+/* Allocate memory for the string copy*/
+str_copy = malloc((len + 1) * sizeof(char));
 
-    if (str_copy == NULL)
-    {
-        return (-1); /* Return an error code if malloc fails*/
-    }
+if (str_copy == NULL)
+{
+/* Return an error code if malloc fails*/
+return (-1);
+}
+/* Copy the string to the dynamically allocated memory*/
+_strcpy(str_copy, str);
+/* Print the string*/
+_puts(str_copy);
+/* Free the dynamically allocated memory*/
+free(str_copy);
 
-    _strcpy(str_copy, str); /* Copy the string to the dynamically allocated memory*/
-    _puts(str_copy); /* Print the string*/
-    free(str_copy); /* Free the dynamically allocated memory*/
-
-    return (len);
+return (len);
 }
