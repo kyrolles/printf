@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 spec fun[] = {{'c', print_char}, {'s', print_string}, {'%', print_precent}, {'d', print_decimal}, {'i', print_decimal}};
 int x = 0;
 int i = 0;
+int flag = 0;
 unsigned long  r;
 int count_s = 0;
 int count = 0;
@@ -35,11 +36,14 @@ for (r = 0; r < (sizeof(fun) / sizeof(fun[0])); r++)
 {
 if (format[i + 1] == fun[r].c)
 {
+flag = 1;
 x = x + fun[r].P(args);
 i++;
 break;
 }
 }
+if(flag == 0)
+_putchar('%');
 }
 i++;
 }
