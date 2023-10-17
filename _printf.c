@@ -10,13 +10,14 @@
 */
 int _printf(const char *format, ...)
 {
+
+spec fun[] = {{'c', print_char}, {'s', print_string}, {'%', print_precent}};
 int x = 0;
 int i = 0;
 int f = 0;
 int cs = 0;
 int c = 0;
 unsigned long  r;
-spec fun[] = {{'c', print_char}, {'s', print_string}, {'%', print_precent}}
 
 va_list args;
 va_start(args, format);
