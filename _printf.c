@@ -12,7 +12,8 @@
 
 int _printf(const char *format, ...)
 {
-spec fun[] = {{'c', print_char}, {'s', print_string}, {'%', print_precent}, {'d', print_decimal}, {'i', print_decimal}};
+spec fun[] = {{'c', print_char}, {'s', print_string},
+{'%', print_precent}, {'d', print_decimal}, {'i', print_decimal}};
 int x = 0;
 int i = 0;
 unsigned long  r;
