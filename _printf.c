@@ -6,6 +6,7 @@ spec fun[] = {{'c',print_char},{'s',print_string},{'%',print_precent}};
 
 int _printf(const char *format, ...)
 {
+int x=0;
 int i = 0;
 unsigned long  r;
 int count_s = 0;
@@ -16,30 +17,29 @@ va_start(args,format);
 
 while (format[i])
 {
-if (format[i] == '%')
+if (format[i] != '%')
 {
-
+_putchar(format[i]);
+count_s++;
+}
+else
+{
 for (r = 0; r < (sizeof(fun) / sizeof(fun[0])); r++)
 {
 if(format[i + 1] == fun[r].c)
-{
-fun[r].P(args);
+{					
+x = x +fun[r].P(args);
 i++;
 break;
 }
 }
 }
-else
-{
-_putchar(format[i]);
-count_s++;
-}
 i++;
 }
 
 
-
-count = count_s;
+count = count_s + x;
 va_end(args);
+
 return (count);	
 }

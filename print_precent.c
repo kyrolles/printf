@@ -2,6 +2,6 @@
 
 int print_precent()
 {
-putchar('%');
+_putchar('%');
 return (1);
 }
