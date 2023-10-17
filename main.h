@@ -5,14 +5,20 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+
 int _putchar(char c);
 int _strlen(char *s);
 int _printf(const char *format, ...);
 char *_strcpy(char *dest, char *src);
 int _puts(char *str);
 
-
-
+/**
+ * struct specefier - this struct specefies which function will be executed
+ * @c: char
+ * @P: pointer function
+ *
+ * Description: this struct specefies which function will be executed
+ */
 
 
 typedef struct specefier
