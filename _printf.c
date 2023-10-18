@@ -25,8 +25,7 @@ while (format[i])
 {
 if (format[i] != '%')
 {
-if (format[i] == '\n')
-cs--;
+/*if (format[i] == '\n') cs--;*/
 _putchar(format[i]);
 cs++; }
 else

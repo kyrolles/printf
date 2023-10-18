@@ -63,6 +63,8 @@ _printf("%k\n");
 printf("%k\n");
 printf("dfdfdddf%kfdfsdf\n");
 _printf("dfdfdddf%kfdfsdf\n");
+printf("%c",'\n');
+_printf("%c",'\n');
 return (0);
 
 }

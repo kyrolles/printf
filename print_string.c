@@ -12,7 +12,7 @@ int print_string(va_list args)
 char *str;
 char *str_copy;
 int len = 0;
-int i;
+/*int i;*/
 
 str = va_arg(args, char*);
 
@@ -24,13 +24,13 @@ str = "(null)";
 len = _strlen(str);
 /* Allocate memory for the string copy*/
 str_copy = malloc((len + 1) * sizeof(char));
-
-for (i = 0; i < len; i++)
-{
-if (str[i] == '\n')
-len--;
-}
-
+/*
+ *for (i = 0; i < len; i++)
+ *{
+ *if (str[i] == '\n')
+ *len--;
+ *}
+**/
 if (str_copy == NULL)
 {
 /* Return an error code if malloc fails*/
