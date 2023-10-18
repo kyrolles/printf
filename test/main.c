@@ -45,12 +45,16 @@ int main(void)
     _printf("%s%c%c%c%s%%%s%c","loading",'.','.','.',"99","please wait",'\n');
     _printf("\n");
     printf("\n");
-    printf("%s\n",(char*)0);
-    _printf("%s\n",(char*)0);
+   /* printf("%s\n",(char*)0);*/
+   /* _printf("%s\n",(char*)0);*/
     printf(NULL);
     _printf(NULL);
-    printf("%s",(char*)0);
-    _printf("%s",(char*)0);
+
+		_printf("%s", "know");
+    printf("%s", "know");
+	
+_printf("%K\n");
+printf("%K\n");
 
 
     return (0);
